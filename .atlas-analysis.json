@@ -1,0 +1,136 @@
+{
+  "projectType": "cli-tool",
+  "projectName": "OpenAgreements",
+  "projectDescription": "Fill standard legal agreement templates and produce signable DOCX files with 25+ templates covering NDAs, cloud terms, SAFEs, and NVCA financing documents.",
+  "theme": "linden",
+  "primaryColor": "#ababab",
+  "lightColor": "#3b3b3b",
+  "darkColor": "#dfdfdf",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "installation",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "CLI Reference",
+            "pages": [
+              "cli/fill",
+              "cli/list",
+              "cli/validate",
+              "cli/recipe",
+              "cli/scan",
+              "cli/checklist"
+            ]
+          },
+          {
+            "group": "Templates",
+            "pages": [
+              "templates/overview",
+              "templates/ndas",
+              "templates/cloud-terms",
+              "templates/employment",
+              "templates/financing",
+              "templates/external",
+              "templates/recipes"
+            ]
+          },
+          {
+            "group": "Integration",
+            "pages": [
+              "integration/claude-code",
+              "integration/cursor",
+              "integration/gemini",
+              "integration/mcp-servers",
+              "integration/agent-skills"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "advanced/workspace-cli",
+              "advanced/content-roots",
+              "advanced/recipe-system",
+              "advanced/compliance-skills"
+            ]
+          },
+          {
+            "group": "Contributing",
+            "pages": [
+              "contributing/overview",
+              "contributing/adding-templates",
+              "contributing/adding-recipes",
+              "contributing/testing"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Core API",
+            "pages": [
+              "api/fill-template",
+              "api/metadata",
+              "api/validation",
+              "api/template-listing"
+            ]
+          },
+          {
+            "group": "Recipe API",
+            "pages": [
+              "api/recipe-engine",
+              "api/recipe-operations"
+            ]
+          },
+          {
+            "group": "Checklist API",
+            "pages": [
+              "api/checklist-operations",
+              "api/checklist-patches"
+            ]
+          },
+          {
+            "group": "External Templates",
+            "pages": [
+              "api/external-templates"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Fill legal templates with interactive prompts or JSON data",
+    "28+ templates including NDAs, cloud terms, SAFEs, NVCA financing",
+    "Recipe system for non-redistributable documents (NVCA)",
+    "MCP server integration for Claude, Cursor, Gemini",
+    "Workspace CLI for contract repository management",
+    "Agent skills for ISO 27001 and SOC 2 compliance",
+    "Local-first execution with optional hosted MCP connector",
+    "Professional DOCX output preserving original formatting"
+  ],
+  "publicApiSurface": [
+    "open-agreements fill <template>",
+    "open-agreements list [--json]",
+    "open-agreements validate [template]",
+    "open-agreements recipe clean <source> -o <output>",
+    "open-agreements scan <docx>",
+    "open-agreements checklist render <data> -o <output>",
+    "fillTemplate(templateName, data, options)",
+    "loadMetadata(templateName)",
+    "validateTemplate(templateName)",
+    "runRecipe(recipeName, options)",
+    "listTemplateItems()",
+    "buildChecklistTemplateContext(checklist)",
+    "runExternalFill(templateName, data, options)"
+  ]
+}
